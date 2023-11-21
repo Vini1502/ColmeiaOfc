@@ -37,12 +37,12 @@
         android:id="@+id/textView2"
         android:layout_width="409dp"
         android:layout_height="39dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
         android:gravity="left"
         android:text="Para mais informações contate: "
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -50,9 +50,9 @@
         android:id="@+id/imageView4"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="180dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:srcCompat="@drawable/instagram" />
@@ -63,17 +63,36 @@
         android:layout_height="58dp"
         app:srcCompat="@drawable/fb"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="106dp" />
+        tools:layout_editor_absoluteY="152dp" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="65dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="56dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="264dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:srcCompat="@drawable/wpp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://www.instagram.com/cursinhocolmeia/"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="369dp"
+        android:layout_height="338dp"
+        android:layout_marginTop="320dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:srcCompat="@drawable/equipe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

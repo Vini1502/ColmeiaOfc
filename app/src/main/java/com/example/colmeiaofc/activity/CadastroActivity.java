@@ -70,7 +70,7 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
                         Toast.makeText(this, "Preencher o email", Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    Toast.makeText(this, "Preencher o nome", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Preencher o nome", Toast.LENGTH_SHORT).show();;
                 }
             }
 
@@ -90,7 +90,6 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
                     Toast.makeText(CadastroActivity.this, "Opa Abelhinha, deu erro", Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
         }
 
