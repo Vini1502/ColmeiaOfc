@@ -67,8 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/botaobrown"
+        android:onClick="validarCampos"
         android:text="CADASTRAR"
-        app:backgroundTint="@null"/>
+        app:backgroundTint="@null" />
 </LinearLayout>
 
 
