@@ -13,7 +13,12 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_loggin);
+    }
+
+    public void cadastrar(View v) {
+        Intent incad = new Intent(this, LoginActivity.class);
+        startActivity(incad);
     }
 }
 

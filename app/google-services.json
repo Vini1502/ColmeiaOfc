@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "864068510323",
+    "project_id": "colmeia-19da6",
+    "storage_bucket": "colmeia-19da6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864068510323:android:5ae2f25f3b541fecd90006",
+        "android_client_info": {
+          "package_name": "com.example.colmeiaofc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnzpxn0cExwhlYM3c9OHiXG5Gnj6Nu9os"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

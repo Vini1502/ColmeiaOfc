@@ -13,12 +13,9 @@
         android:theme="@style/Theme.ColmeiaOfc"
         tools:targetApi="31"
         >
-        <activity
-            android:name=".activity.CadastroActivity"
-            android:exported="true" />
-        <activity
-            android:name=".activity.LoginActivity"
-            android:exported="false"/>
+        <activity android:name=".activity.CadastroActivity"></activity>
+        <activity android:name=".activity.LoginActivity"></activity>
+
         <activity
             android:name=".activity.WelcomeScreen"
             android:exported="false" />
