@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cadastro"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:text="COLMEIA"
+        android:textColor="#5A2601"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/editTextEmailLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_text"
+        android:drawableStart="@drawable/baseline_email_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:inputType="text"
+        android:padding="10dp"
+        android:text="Email" />
+
+    <EditText
+        android:id="@+id/editTextSenhaLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_text"
+        android:drawableStart="@drawable/baseline_lock_24"
+        android:drawablePadding="6dp"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:padding="10dp"
+        android:text="Senha" />
+
+    <Button
+        android:id="@+id/buttonAcessarLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botaobrown"
+        android:text="ACESSAR"
+        app:backgroundTint="@null"/>
+
+    <Button
+        android:id="@+id/buttonCadastre_se"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botaobrown"
+        android:onClick="cadastrar"
+        android:text="CADASTRE-SE"
+        app:backgroundTint="@null" />
+
+</LinearLayout>
+
+
