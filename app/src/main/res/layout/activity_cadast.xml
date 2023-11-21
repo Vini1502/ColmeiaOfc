@@ -31,7 +31,8 @@
         android:gravity="center|start"
         android:inputType="text"
         android:padding="10dp"
-        android:text="Nome" />
+        android:text="Nome"
+        android:visibility="visible" />
 
     <EditText
         android:id="@+id/editTextEmail"

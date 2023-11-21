@@ -1,5 +1,6 @@
 package com.example.colmeiaofc.activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,10 @@ import android.widget.Toast;
 
 import com.example.colmeiaofc.R;
 import com.example.colmeiaofc.model.Usuário;
+import com.example.colmeiaofc.útil.ConfiguraBd;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class CadastroActivity extends AppCompatActivity { //é minha main
@@ -49,7 +54,7 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
                 if (!email.isEmpty()) {
                     if(!senha.isEmpty()) {
 
-                        Usuário usuario = new Usuário();
+                        usuario = new Usuário();
 
                         usuario.setNome(nome);
                         usuario.setEmail(email);
@@ -70,8 +75,24 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
             }
 
     private void cadastrarUsuario() {
-    }
 
+        autenticacao = ConfiguraBd.Firebaseauth();
+
+        autenticacao.createUserWithEmailAndPassword(
+                usuario.getEmail(), usuario.getSenha()
+        ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
+        {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(CadastroActivity.this, "Sucesso ao Cadastrar o Usuário", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(CadastroActivity.this, "Opa Abelhinha, deu erro", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+        });
+        }
 
 }
 
