@@ -7,6 +7,30 @@
     android:background="#FFD500"
     tools:context=".activity.TelaNoite">
 
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="365dp"
+        android:layout_height="196dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/alata"
+        android:gravity="center_horizontal"
+        android:text="Boooa! Agora selecione algum dia para verificar os horários de aula"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="157dp"
+        android:layout_height="291dp"
+        android:layout_marginTop="488dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_1" />
+
     <Button
         android:id="@+id/segundan"
         android:layout_width="186dp"

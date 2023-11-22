@@ -1,5 +1,6 @@
 package com.example.colmeiaofc.activity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,4 +25,12 @@ public class WelcomeScreen extends AppCompatActivity {
         Intent inn = new Intent(WelcomeScreen.this, TelaNoite.class);
         startActivity(inn);
     }
-}
+    /*public void onClick(View v){
+
+        AlertDialog.Builder apareceHorario = new AlertDialog.Builder(WelcomeScreen.this);
+        apareceHorario.setTitle("Horários de Aula");
+        apareceHorario.setMessage("Consulte seus horários");
+
+
+        apareceHorario.create().show();*/
+    }
