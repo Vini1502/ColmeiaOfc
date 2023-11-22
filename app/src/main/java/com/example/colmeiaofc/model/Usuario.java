@@ -1,10 +1,10 @@
 package com.example.colmeiaofc.model;
 
-public class Usuário {
+public class Usuario {
 
     private String nome,email,senha;
 
-    public Usuário() {
+    public Usuario() {
     }
 
     public String getNome() {
