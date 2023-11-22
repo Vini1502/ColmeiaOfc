@@ -53,8 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/botaobrown"
+        android:onClick="validarAutenticacao"
         android:text="ACESSAR"
-        app:backgroundTint="@null"/>
+        app:backgroundTint="@null" />
 
     <Button
         android:id="@+id/buttonCadastre_se"

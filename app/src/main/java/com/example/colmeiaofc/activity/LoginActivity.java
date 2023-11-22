@@ -1,73 +1,120 @@
 package com.example.colmeiaofc.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.colmeiaofc.R;
+import com.example.colmeiaofc.contatos;
 import com.example.colmeiaofc.model.Usuário;
+import com.example.colmeiaofc.útil.ConfiguraBd;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity { //tela de cadastro
-    private SQLiteDatabase bancoDados;
+public class LoginActivity extends AppCompatActivity {
 
-    Usuário usuario;
-    FirebaseAuth autenticacao;
-    EditText campoNome, campoEmail, campoSenha;
-    Button botaoCadastrar;
+    EditText campoEmail, campoSenha;
+    Button botaoAcessar;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadast);
+        setContentView(R.layout.activity_loggin);
 
-        inicializar();
-        ///validar campos();
+        auth = ConfiguraBd.Firebaseauth();
+        inicializarComponentes();
     }
 
-    private void inicializar() {
-        campoNome = findViewById(R.id.editTextNome);
-        campoEmail = findViewById(R.id.editTextEmail);
-        campoSenha = findViewById(R.id.editTextSenha);
-        botaoCadastrar = findViewById(R.id.buttonCadastrar);
-    }
+    public void validarAutenticacao(View view){
 
-    public void validarCampos(View v) {
-        String nome = campoNome.getText().toString();
         String email = campoEmail.getText().toString();
         String senha = campoSenha.getText().toString();
 
+        if(!email.isEmpty()){
+            if(!senha.isEmpty()){
 
-        if (!nome.isEmpty()) {
-            if (!email.isEmpty()) {
-                if (!senha.isEmpty()) {
+                Usuário usuario = new Usuário();
 
-                    Usuário usuario = new Usuário();
+                usuario.setEmail(email);
+                usuario.setSenha(senha);
 
-                    usuario.setNome(nome);
-                    usuario.setEmail(email);
-                    usuario.setSenha(senha);
+                logar(usuario);
 
-                    //cadastro do usuário
-                    cadastrarUsuario();
 
-                } else {
-                    Toast.makeText(this, "Preencher a senha", Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                Toast.makeText(this, "Preencher o email", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "Preencha a Senha", Toast.LENGTH_SHORT).show();
             }
-        } else {
-            Toast.makeText(this, "Preencher o nome", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Preencha o Email", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void cadastrarUsuario() {
+    private void logar(Usuário usuario) {
+
+        auth.signInWithEmailAndPassword(
+                usuario.getEmail(), usuario.getSenha()
+        ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    abrirWelcomeScreen();
+                }else{
+                    String excecao="";
+                    try {
+                        throw task.getException();
+                    }catch (FirebaseAuthInvalidUserException e){
+                        excecao = "Usuário não está cadastrado";
+                    }catch (FirebaseAuthInvalidCredentialsException e){
+                        excecao = "Email ou Senha Incorreto";
+                    }catch (Exception e){
+                        excecao = "Erro ao Logar o usuário"+e.getMessage();
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(LoginActivity.this, excecao, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
+
+    private void abrirWelcomeScreen() {
+        Intent i = new Intent(LoginActivity.this, WelcomeScreen.class);
+        startActivity(i);
+    }
+
+
+    public void cadastrar(View view){
+        Intent i = new Intent(this, CadastroActivity.class);
+        startActivity(i);
+    }
+
+
+    protected void onStart(){
+    super.onStart();
+        FirebaseUser usuarioAuth = auth.getCurrentUser();
+        if(usuarioAuth !=null){
+            abrirWelcomeScreen();
+        }
+    }
+
+
+
+
+    private void inicializarComponentes(){
+        campoEmail = findViewById(R.id.editTextEmailLogin);
+        campoSenha = findViewById(R.id.editTextSenhaLogin);
+        botaoAcessar = findViewById(R.id.buttonAcessarLogin);
+    }
+
 }

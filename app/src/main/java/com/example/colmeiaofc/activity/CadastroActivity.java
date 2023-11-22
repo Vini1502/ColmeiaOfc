@@ -15,8 +15,12 @@ import com.example.colmeiaofc.model.Usuário;
 import com.example.colmeiaofc.útil.ConfiguraBd;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class CadastroActivity extends AppCompatActivity { //é minha main
 
@@ -27,7 +31,7 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loggin);
+        setContentView(R.layout.activity_cadast);;
 
         inicializar();
         ///validar campos();
@@ -80,14 +84,27 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
 
         autenticacao.createUserWithEmailAndPassword(
                 usuario.getEmail(), usuario.getSenha()
-        ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
-        {
+        ).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(CadastroActivity.this, "Sucesso ao Cadastrar o Usuário", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(CadastroActivity.this, "Opa Abelhinha, deu erro", Toast.LENGTH_SHORT).show();
+                    String excecao = "";
+
+                    try{
+                        throw task.getException();
+                    }catch (FirebaseAuthWeakPasswordException e){  //exceção para senha muito fraca inserida pelo usuário
+                        excecao = "Digite uma senha mais forte";
+                    }catch (FirebaseAuthInvalidCredentialsException e){  //exceção para email inválido
+                        excecao = "Digite um email válido";
+                    }catch (FirebaseAuthUserCollisionException e){        //Usuário tentando cadastrar uma conta já existente
+                        excecao = "Essa conta já existe";
+                    }catch (Exception e){
+                        excecao = "Erro ao cadastrar usuário" + e.getMessage();
+                        e.printStackTrace();                                        //Trazer um log de erro
+                    }
+                    Toast.makeText(CadastroActivity.this, excecao, Toast.LENGTH_SHORT).show();
                 }
             }
         });
