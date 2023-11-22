@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFD500"
-    tools:context=".contatos">
+    tools:context=".activity.Contatos">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textWpp"
         android:layout_width="310dp"
         android:layout_height="36dp"
         android:layout_marginTop="280dp"
-        android:fontFamily="@font/cherry_cream_soda"
+        android:fontFamily="@font/alata"
         android:text="(19) 92136-4078"
         android:textSize="26dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,15 +21,15 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="284dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="196dp"
-        android:fontFamily="@font/cherry_cream_soda"
+        android:id="@+id/textInsta"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="184dp"
+        android:fontFamily="@font/alata"
         android:text="cursinhocolmeia"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintHorizontal_bias="0.691"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -64,7 +64,7 @@
         android:layout_width="409dp"
         android:layout_height="39dp"
         android:layout_marginTop="24dp"
-        android:fontFamily="@font/cherry_cream_soda"
+        android:fontFamily="@font/alata"
         android:gravity="left"
         android:text="Para mais informações contate: "
         android:textSize="25dp"
@@ -74,20 +74,23 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageInsta"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/alata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.039"
+        android:autoLink="web"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageFacebook"
         app:srcCompat="@drawable/instagram" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageFacebook"
         android:layout_width="54dp"
         android:layout_height="58dp"
+        android:fontFamily="@font/alata"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -96,26 +99,27 @@
         app:srcCompat="@drawable/fb" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageWpp"
         android:layout_width="56dp"
         android:layout_height="59dp"
         android:layout_marginTop="28dp"
+        android:fontFamily="@font/alata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageInsta"
         app:srcCompat="@drawable/wpp" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="284dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="108dp"
-        android:fontFamily="@font/cherry_cream_soda"
+        android:id="@+id/textFace"
+        android:layout_width="288dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/alata"
         android:text="cursinhocolmeia"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintHorizontal_bias="0.699"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -124,8 +128,9 @@
         android:layout_width="390dp"
         android:layout_height="339dp"
         android:layout_marginTop="316dp"
+        android:fontFamily="@font/alata"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:srcCompat="@drawable/equipe" />
@@ -134,13 +139,13 @@
         android:id="@+id/textView4"
         android:layout_width="350dp"
         android:layout_height="67dp"
-        android:layout_marginTop="628dp"
+        android:layout_marginTop="612dp"
         android:fontFamily="@font/cherry_cream_soda"
         android:gravity="left"
         android:text="Venha estudar conosco ! "
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
