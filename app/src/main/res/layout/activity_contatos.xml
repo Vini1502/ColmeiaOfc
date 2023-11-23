@@ -11,12 +11,12 @@
         android:id="@+id/textMaps"
         android:layout_width="299dp"
         android:layout_height="85dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="280dp"
         android:fontFamily="@font/alata"
         android:text=" R. Francisco Bisca, 121 - Jardim Morro Azul, Limeira - SP, 13484-487"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintHorizontal_bias="0.875"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -29,13 +29,13 @@
         android:text="(19) 92136-4078"
         android:textSize="26dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
     <TextView
         android:id="@+id/textInsta"
-        android:layout_width="291dp"
+        android:layout_width="281dp"
         android:layout_height="48dp"
         android:layout_marginTop="140dp"
         android:fontFamily="@font/alata"
@@ -74,15 +74,15 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="409dp"
+        android:layout_width="376dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/alata"
         android:gravity="left"
         android:text="Para mais informações contate: "
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -90,11 +90,11 @@
         android:id="@+id/imageInsta"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="140dp"
         android:autoLink="web"
         android:fontFamily="@font/alata"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:srcCompat="@drawable/instagram" />
@@ -103,7 +103,7 @@
         android:id="@+id/imageFacebook"
         android:layout_width="54dp"
         android:layout_height="58dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/alata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
@@ -132,7 +132,7 @@
         android:text="cursinhocolmeia"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintHorizontal_bias="0.756"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -143,22 +143,21 @@
         android:layout_marginTop="376dp"
         android:fontFamily="@font/alata"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:srcCompat="@drawable/equipe" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="377dp"
-        android:layout_height="60dp"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
         android:layout_marginTop="564dp"
         android:fontFamily="@font/alata"
         android:gravity="left"
         android:text="Venha estudar conosco ! "
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
