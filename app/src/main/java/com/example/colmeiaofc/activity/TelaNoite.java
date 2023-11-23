@@ -24,6 +24,9 @@ public class TelaNoite extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_noite);
 
+        //Muda cor da Status Bar
+        getWindow().setStatusBarColor(getColor(R.color.black));
+
         segunda = (Button) findViewById(R.id.segundan);
         segunda.setOnClickListener(new View.OnClickListener() {
             @Override

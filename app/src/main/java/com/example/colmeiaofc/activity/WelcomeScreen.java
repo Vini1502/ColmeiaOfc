@@ -19,6 +19,9 @@ public class WelcomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
 
+        //Muda cor da Status Bar
+        getWindow().setStatusBarColor(getColor(R.color.black));
+
         buttonLogout = findViewById(R.id.buttonLogout);
 
         buttonLogout.setOnClickListener(new View.OnClickListener() {

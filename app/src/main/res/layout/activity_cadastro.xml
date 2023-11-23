@@ -40,14 +40,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:background="@drawable/background_text"
-        android:drawableStart="@drawable/baseline_person_24"
+        android:drawableStart="@drawable/baseline_email_24"
         android:drawablePadding="6dp"
-        android:padding="10dp"
         android:ems="10"
         android:gravity="center|start"
-        android:visibility="visible"
         android:hint="Email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:visibility="visible" />
 
     <EditText
         android:id="@+id/editTextSenhaLogin"
@@ -55,14 +55,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:background="@drawable/background_text"
-        android:drawableStart="@drawable/baseline_person_24"
+        android:drawableStart="@drawable/baseline_lock_24"
         android:drawablePadding="6dp"
-        android:padding="10dp"
         android:ems="10"
         android:gravity="center|start"
-        android:visibility="visible"
         android:hint="Senha"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/buttonCadastrar"

@@ -34,6 +34,10 @@ public class LoginActivity extends AppCompatActivity {
 
         auth = ConfiguraBd.Firebaseauth();
         inicializarComponentes();
+
+        //Muda cor da Status Bar
+        getWindow().setStatusBarColor(getColor(R.color.black));
+
     }
 
     public void validarAutenticacao(View view){
@@ -110,6 +114,6 @@ public class LoginActivity extends AppCompatActivity {
         campoEmail = findViewById(R.id.editTextEmailLogin);
         campoSenha = findViewById(R.id.editTextSenhaLogin);
         botaoAcessar = findViewById(R.id.buttonAcessarLogin);
-    }
 
+    }
 }

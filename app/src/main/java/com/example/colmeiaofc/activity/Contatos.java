@@ -15,12 +15,23 @@ public class Contatos extends AppCompatActivity {
     private TextView txtInstagramLink;
     private TextView mapsLink;
 
+    private TextView faceLink;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contatos);
         txtInstagramLink = findViewById(R.id.textInsta);
         mapsLink = findViewById(R.id.textMaps);
+        faceLink = findViewById(R.id.textFace);
+        faceLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String faceUrl = "https://www.facebook.com/cursinhocolmeiaindigena";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(faceUrl));
+                startActivity(intent);
+            }
+        });
 
         mapsLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,5 +52,7 @@ public class Contatos extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //Muda cor da Status Bar
+        getWindow().setStatusBarColor(getColor(R.color.black));
     }
 }

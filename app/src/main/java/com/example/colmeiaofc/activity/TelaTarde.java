@@ -24,6 +24,9 @@ public class TelaTarde extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_tarde);
 
+        //Muda cor da Status Bar
+        getWindow().setStatusBarColor(getColor(R.color.black));
+
             segunda = (Button) findViewById(R.id.segundat);
             segunda.setOnClickListener(new View.OnClickListener() {
                 @Override

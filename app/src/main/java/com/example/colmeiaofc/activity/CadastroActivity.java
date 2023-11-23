@@ -33,7 +33,9 @@ public class CadastroActivity extends AppCompatActivity { //é minha main
         setContentView(R.layout.activity_cadastro);;
 
         inicializar();
-        ///validar campos();
+
+        //mudando cor da barra
+        getWindow().setStatusBarColor(getColor(R.color.black));
     }
 
     public void cadastrar(View v) {
